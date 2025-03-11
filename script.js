@@ -1,7 +1,7 @@
 function validationForm(event) {
         event.preventDefault();
-        let name = document.getElementById("nameValue").value.trim();
-        let age = document.getElementById("ageValue").value.trim();
+        let name = document.getElementById("name").value.trim();
+        let age = document.getElementById("age").value.trim();
         if (name === "" || age === "") {
           alert("Please enter valid details.");
           return;
