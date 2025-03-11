@@ -7,14 +7,18 @@ function validationForm(event) {
           return;
         }
         let ageNumber = parseInt(age);
-        new Promise((resolve, reject) => {
-          setTimeout(() => {
-            if (ageNumber >= 18) {
-              resolve(`Welcome, ${name}. You can vote.`);
-            } else {
-              reject(`Oh sorry, ${name}. You aren't old enough.`);
-            }
-          }, 4000);
-        }).then(result => alert(result))
-        .catch(error => alert(error));
-      }
+        return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        if (ageNumber >= 18) {
+          resolve(`Welcome, ${name}. You can vote.`);
+        } else {
+          reject(`Oh sorry, ${name}. You aren't old enough.`);
+        }
+      }, 4000);
+    });
+}
+
+// Usage:
+validationForm(event)
+    .then(result => alert(result))
+    .catch(error => alert(error));
