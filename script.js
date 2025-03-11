@@ -1,13 +1,13 @@
 function validationForm(event) {
-        event.preventDefault();
-        let name = document.getElementById("name").value.trim();
-        let age = document.getElementById("age").value.trim();
-        if (name === "" || age === "") {
-          alert("Please enter valid details.");
-          return;
-        }
-        let ageNumber = parseInt(age);
-        return new Promise((resolve, reject) => {
+    event.preventDefault();
+    let name = document.getElementById("name").value.trim();
+    let age = document.getElementById("age").value.trim();
+    if (name === "" || age === "") {
+      alert("Please enter valid details.");
+      return;
+    }
+    let ageNumber = parseInt(age);
+    return new Promise((resolve, reject) => {
       setTimeout(() => {
         if (ageNumber >= 18) {
           resolve(`Welcome, ${name}. You can vote.`);
