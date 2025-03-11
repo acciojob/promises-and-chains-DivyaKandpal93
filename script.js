@@ -15,10 +15,9 @@ function validationForm(event) {
           reject(`Oh sorry, ${name}. You aren't old enough.`);
         }
       }, 4000);
-    });
+    }) .then(result => alert(result))
+    .catch(error => alert(error));
 }
 
-// Usage:
-validationForm(event)
-    .then(result => alert(result))
-    .catch(error => alert(error));
+
+   
